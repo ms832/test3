@@ -1,0 +1,31 @@
+<html>
+  <body>
+<button id="js-btn">ボタンクリック！</button>
+<div class="box"></div></div>
+<style>
+ .box {
+ width: 200px;
+ height: 200px;
+ background: orange;
+ transition: 2s;
+}
+
+
+.is-active {
+ border-radius: 50%;
+}
+
+</style>
+<script>
+  var action = document.getElementById('js-btn');
+  action.onclick = function(){
+    var box = document.getElementsByClassName('box'); 
+    box[0].classList.add('is-active');
+  }
+  window.addEventListener('load', function() {
+    console.log('全ての読み込みが完了しました');
+  });
+
+</script>
+</body>
+</html>

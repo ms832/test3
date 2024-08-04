@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="dom.css">
+        <meta charset="UTF-8">
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <body>
+        <div id="container">
+            <div id="header">
+              <div id="logo">ロゴ</div>
+              <div id="menu">
+                <ul>
+                  <li><a href="#">ホーム</a></li>
+                  <li><a href="#">お知らせ</a></li>
+                  <li><a href="#">お問い合わせ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="main">
+              <div id="article">
+                <h2>記事タイトル</h2>
+                <p>記事の内容</p>
+              </div>
+              <div id="sidebar">
+                <h3>サイドバー</h3>
+                <ul>
+                  <li><a href="#">リンク1</a></li>
+                  <li><a href="#">リンク2</a></li>
+                  <li><a href="#">リンク3</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="footer">
+              <div id="contact">
+                <p>お問い合わせはこちらから</p>
+                <a href="#">お問い合わせフォーム</a>
+              </div>
+
+              <button id="button">ボタン</button>
+            </div>
+           </div>
+           
+           <script>
+            var article = document.getElementById('article');
+            console.log(article);
+            console.log(article.textContent);
+
+            button.addEventListener('click', () => {
+            alert("ボタンがクリックされました");
+          });
+
+          $("#logo").click(function(){
+            alert("ロゴがクリックされました");
+          });
+           </script>         
+      </body>
+</html>

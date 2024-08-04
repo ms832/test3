@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>咳がアプリ</title>
+ </head>
+ <body>
+   <h1>席替えアプリのロジック学習</h1>
+   <p>更新ボタンで席替えを行う</p>
+   <div id="seki"></div>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>
+  //↓ここから
+   const a = ["山崎","児玉","神山","鈴木","田中","高橋","園田","井上","山岸","香田",];//①aにデータを入れる。
+   let column = 3; //②columnに3を代入
+   let count = 1;//③countに1を代入
+   const n = a.length;//④aの要素数を取得する(10)
+     for (let i = 0; i < n; i++) {//⑤初期値にi＝0を入れる,i<10,繰り返し処理のカウント
+      const r = Math.floor(Math.random() * a.length);//⑥Math.random()にa.lengthを掛けて、ランダムな数値を生成する。
+      const v = a.splice(r, 1);//⑦aに入れたデータの中で、⑥でランダムに生成されたr番目の要素を1つ取り除く。
+      if (count % column == 0) {//⑧1÷3=0の場合
+         $("#seki").append("|" + v + "<br>");
+       } else {
+         $("#seki").append("|" + v);
+       }
+       count++;//⑨countに1を加算する
+     }
+  //↑ここまで
+   </script>
+ </body>
+</html>
